@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(49, 6, 6);
+            color: bisque;
+        }
+        div#q1{
+            background-color: rgb(87, 52, 0);
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+        }
+        div#q2{
+            background-color: rgb(87, 52, 0);
+            width: 150px;
+            height: 150px; 
+            line-height: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>tente a sorte</h1>
+    <P>Apenas 1 dos quadrados é o correto tente a sorte</P>
+    <div id="q1"> Quadrado 1 </div> 
+    <div id="q2"> Quadrado 2 </div>
+
+    <script>
+        var q1 = document.querySelector('div#q1')
+        q1.addEventListener('click', clicou)
+        q1.addEventListener('mouseover', entrou)
+        q1.addEventListener('mouseout', sair)
+        function clicou(){
+         q1.innerText = 'Errou otario'
+         q1.style.background = 'red'
+        }
+        function entrou(){
+            q1.innerText = 'Certeza?'
+        }
+        function sair(){
+            q1.innerText = 'Bem pensado'
+        }
+
+        var q2 = document.querySelector('div#q2')
+        q2.addEventListener('click', clicou2)
+        q2.addEventListener('mouseover', entrou2)
+        q2.addEventListener('mouseout', sair2)
+
+        function clicou2() {
+            q2.innerText = 'Parabens'
+            q2.style.background = 'green'
+        }
+        function entrou2() {
+            q2.innerText = 'pense bem'
+
+        }
+        function sair2() {
+             q2.innerText = 'Ainda bem!'
+        }
+    </script>
+</body>
+</html>
